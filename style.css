@@ -1,0 +1,130 @@
+          table{
+                position:fixed;
+                left: 31.5%;
+                width: 45%;
+                height: 95%;
+                align-items: center;
+                border:8px solid white;
+                background-color: black;
+                border-radius: 20px;
+            }
+            
+            body{
+                background-color: #D5B0AC;
+            }
+            
+            #instructions{
+                position:fixed;
+                top: 30%;
+                left: 1.5%;
+                border:3px solid white;
+                width: 27%;
+                border-radius: 10px;
+                background-color: #2F1847;
+              
+
+            }
+
+            li{
+                font-size: 1.1em;
+            }
+
+            #score{
+                border:1px solid  rgb(255, 255, 255);
+                padding: 10px;
+                background-color: #2F1847;
+                color: #d8c8c8;
+                border-radius: 10px;
+            }
+
+            #highscore{
+                border:1px solid  rgb(255, 255, 255);
+                background-color: #2F1847;
+                color: #d8c8c8;
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            .scorediv{
+                position:fixed;
+                top: 29%;
+                left:80%;
+                width: 17%;
+                background-color: #2F1847;
+                border: 3px solid white;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+        
+            #dialogbox{
+                display: none;
+                position:fixed;
+                top:  0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(231, 7, 179, 0.5);
+                z-index: 1; 
+                
+            }
+        
+            #dialogbox_content{
+                background-color: #fff;
+                padding: 15px;
+                padding-top:20px;
+                margin-top:15%;
+                width: 20%;
+                height: 18%;
+                text-align: center;
+                border-radius: 10px;
+                border: 4px solid #2F1847;
+            }
+        
+            button{
+                background-color:#fff;
+                color: #402e2a;
+                padding: 10px;
+                border-radius: 8px;
+            }
+        
+            button:hover{ 
+                background-color: #472d27;
+                color: #fff;
+                font-weight: bold;
+             }
+             .notAvailable{
+                display: none;
+             }
+        
+
+             @media (max-width:700px){
+                table{
+                 display:none;
+
+                    }
+                #instructions{
+                   display:none;
+                }
+                .scorediv{
+                    display:none;
+                }   
+                .notAvailable{
+                position: fixed;
+                top: 30%;
+                left: 25%;
+                width: 50%;
+                display: block;
+                color: #fff;
+                background-color: #2F1847;
+                border-radius: 15px;
+                border: 5px solid white;
+
+             }
+             h1{
+                color: #d8c8c8;
+             }
+             }
+
+        
+        
