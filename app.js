@@ -1,6 +1,7 @@
 const rows = 20; 
 const cols = 20;
 const table = document.querySelector("table");
+var ispaused =false;
 
 for (let i = 0; i < rows; i++) {
     const row = document.createElement("tr");
@@ -56,8 +57,13 @@ arr[initialFoodRow][initialFoodCol].style.borderRadius="70px";
 
 document.addEventListener('keyup' , 
 function(e){
-    prevDirection=direction;
+    prevDirection=direction;  
     if(e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "ArrowRight" || e.key === "ArrowLeft")direction = e.key;
+    else if(e.key ===" "){
+        ispaused=!ispaused;
+        resume_or_Pause_Play();
+        console.log(e.key);
+    }
 }
 )
 
@@ -117,6 +123,7 @@ function moveAhead(){
         return;
     }
     
+    
 
     if((arr[currow][curcol].style.backgroundColor==="white")){
         clearInterval(movesnake);
@@ -170,5 +177,14 @@ function moveAhead(){
     }
 
 }
+    function resume_or_Pause_Play(){
+        if(ispaused){
+            clearInterval(movesnake);
+        }
+        else{
+            movesnake = setInterval(moveAhead,300);
+        }
+    }
+
 
  let movesnake = setInterval(moveAhead,300);
